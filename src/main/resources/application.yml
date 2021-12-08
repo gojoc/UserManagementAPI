@@ -1,0 +1,20 @@
+server:
+  port: 9001
+  error:
+    include-stacktrace: never
+spring:
+  mvc:
+    log-resolved-exception: false
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+  datasource:
+    driverClassName: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/samekh
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+jwt:
+  secret: ${JWT_SECRET}
+  issuer: samekh
